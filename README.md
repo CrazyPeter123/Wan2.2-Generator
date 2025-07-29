@@ -4,7 +4,7 @@
 
 **Wan 2.2** is Alibaba Tongyi Lab’s latest open video foundation model, released July 2025.  
 It’s a **Mixture-of‑Experts (MoE) diffusion‑transformer** with **27 billion parameters**, while activating only ~14 billion weights per diffusion step—enabling higher capacity at similar GPU cost.  
-Shipped under the **Apache‑2.0 licence**, both code and weights can be used commercially with no royalties. [oai_citation:0‡Pollo AI](https://pollo.ai/m/wanx-ai/wan-2-2?utm_source=chatgpt.com) [oai_citation:1‡wanvideogenerator.com](https://wanvideogenerator.com/wan22?utm_source=chatgpt.com)  
+Shipped under the **Apache‑2.0 licence**, both code and weights can be used commercially with no royalties. 
 
 Unlike closed models (e.g. Sora, Lumiere), Wan 2.2 is fully open‑source and community‑driven. It turns text or image prompts into 24 fps, 720 p cinematic video via open APIs and ready‑built apps.
 
@@ -20,7 +20,7 @@ Unlike closed models (e.g. Sora, Lumiere), Wan 2.2 is fully open‑source and 
 | Output resolution         | 480 p                                      | **720 p**                                   | Cleaner rendering, less artifacts     |
 | Checkpoints               | T2V‑14 B / TI2V‑1.3 B                     | TI2V‑5 B, I2V‑A14 B, T2V‑A14 B              | Fits more GPU tiers                   |
 | Benchmark (FVD)           | ~196                                       | ~148 (≈24 % better)                         | Lower perceptual error                |  
- [oai_citation:2‡wanvideogenerator.com](https://wanvideogenerator.com/wan22?utm_source=chatgpt.com) [oai_citation:3‡docs.pollo.ai](https://docs.pollo.ai/m/wanx/wan-v2-2?utm_source=chatgpt.com) [oai_citation:4‡wanvideo.io](https://wanvideo.io/?utm_source=chatgpt.com) [oai_citation:5‡mimicpc.com](https://www.mimicpc.com/learn/wanvideo-the-best-open-source-image-to-video-generator?utm_source=chatgpt.com) [oai_citation:6‡wanvideogenerator.com](https://wanvideogenerator.com/free-wan-video-generator?utm_source=chatgpt.com)  
+
 
 In practice, creators say Wan 2.2 produces smoother camera moves, more accurate object placement (“a red kite flying beside a yellow umbrella”), and richer audiovisual consistency—even when run on the same GPU.
 
@@ -34,22 +34,20 @@ Two expert networks split the denoising task:
 - **High‑noise expert** handles early diffusion to sketch global motion and layout  
 - **Low‑noise expert** polishes color, edges, and temporal stability in later steps  
 
-Only one expert fires per step—keeping memory usage in line with a 14 B model but delivering quality like a much larger one. [oai_citation:7‡wanvideogenerator.com](https://wanvideogenerator.com/?utm_source=chatgpt.com) [oai_citation:8‡wanvideogenerator.com](https://wanvideogenerator.com/wan22?utm_source=chatgpt.com)
+Only one expert fires per step—keeping memory usage in line with a 14 B model but delivering quality like a much larger one. 
 
 ### 3.2 Cinematic Metadata Tags  
 Each training clip is labeled with 20+ properties: lighting mood, motion type (handheld, drone), lens focal length, LUT style, even film stock emulation.  
-These tags let prompts like *“handheld 35 mm film grain at dusk, teal‑orange color grade”* result in deterministic, cinematic visuals. [oai_citation:9‡wanvideogenerator.com](https://wanvideogenerator.com/wan22?utm_source=chatgpt.com)
+These tags let prompts like *“handheld 35 mm film grain at dusk, teal‑orange color grade”* result in deterministic, cinematic visuals. 
 
 ### 3.3 Lightweight TI2V‑5 B Variant  
 The **TI2V‑5 B** checkpoint is a dense 5 B model packaged with the VAE pipeline. It accepts both text and reference images, runs on **8 GB VRAM**, and powers free-tier endpoints. Ideal for hobbyists or lightweight SaaS applications.
 
 ### 3.4 Multilingual Text Rendering  
-Balanced bilingual (Chinese + English) caption data enables crisp on-screen text in both languages. This supports global marketing use‑cases and bilingual storytelling. [oai_citation:10‡wanvideogenerator.com](https://wanvideogenerator.com/wan22?utm_source=chatgpt.com)
+Balanced bilingual (Chinese + English) caption data enables crisp on-screen text in both languages. This supports global marketing use‑cases and bilingual storytelling.
 
 ### 3.5 Day‑One Ecosystem Support  
-Wan 2.2 launched with fully integrated **ComfyUI** workflows, Hugging Face Diffusers pipelines, and OBS plugin support—plus official FastAPI stubs—making setup as easy as installing templates. [oai_citation:11‡YouTube](https://www.youtube.com/watch?pp=0gcJCfwAo7VqN5tD&v=F8zAdEVlkaQ&utm_source=chatgpt.com)
-
----
+Wan 2.2 launched with fully integrated **ComfyUI** workflows, Hugging Face Diffusers pipelines, and OBS plugin support—plus official FastAPI stubs—making setup as easy as installing templates. 
 
 ## 4. How *Wan 2.2* Works (Overview)
 
@@ -66,7 +64,7 @@ Wan 2.2 launched with fully integrated **ComfyUI** workflows, Hugging Face Dif
    ~26–32 diffusion iterations refine the latent, using classifier‑free guidance to adhere to prompt semantics.
 
 5. **Decoding & Upscaling**  
-   VAE outputs 24 fps RGB frames; optional ESRGAN or Video‑ESRGAN upscales to 1080 p or higher downstream. [oai_citation:12‡wanvideogenerator.com](https://wanvideogenerator.com/?utm_source=chatgpt.com)  
+   VAE outputs 24 fps RGB frames; optional ESRGAN or Video‑ESRGAN upscales to 1080 p or higher downstream. 
 
 **Runtime** (on RTX 3090):  
 - TI2V‑5 B: ~9 minutes for 5 s at 720 p (≈ 120 frames)  
@@ -78,7 +76,7 @@ Wan 2.2 launched with fully integrated **ComfyUI** workflows, Hugging Face Dif
 
 If you don't want to build or run locally, you can use the **free online Wan 2.2 tool** at:
 
-👉 [https://wanvideogenerator.com/free-wan22-video-generator](https://wanvideogenerator.com/free-wan22-video-generator) [oai_citation:13‡wanvideogenerator.com](https://wanvideogenerator.com/wan22?utm_source=chatgpt.com)
+👉 [Free wan2.2 video generator](https://wanvideogenerator.com/free-wan22-video-generator) 
 
 ### Free Online Wan 2.2 Generator
 1. Visit the link above.
@@ -93,7 +91,7 @@ This free tool supports both text-generated and image-guided video modes powered
 ### Paid Tier via Pollo.ai  
 For heavier use or API access, you can try the Wan 2.2 model on **Pollo.ai**:
 
-👉 [https://pollo.ai/m/wanx-ai/wan-2‑2?ref=mwjmndr](https://pollo.ai/m/wanx-ai/wan-2-2?ref=mwjmndr) [oai_citation:14‡Pollo AI](https://pollo.ai/m/wanx-ai/wan-2-2?utm_source=chatgpt.com) [oai_citation:15‡mimicpc.com](https://www.mimicpc.com/learn/wanvideo-the-best-open-source-image-to-video-generator?utm_source=chatgpt.com) [oai_citation:16‡wanvideogenerator.com](https://wanvideogenerator.com/wan22?utm_source=chatgpt.com)
+👉 [Pollo AI all in one platform](https://pollo.ai/m/wanx-ai/wan-2-2?ref=mwjmndr) 
 
 - Allows both **text-to-video** and **image-to-video** generation  
 - Faster servers and prioritised queue  
@@ -115,12 +113,13 @@ curl https://pollo.ai/api/platform/generation/wanx/wan-v2-2 \
     },
     "webhookUrl": ""
   }'
+```bash
 
 Response returns a taskId and status to poll for completion. ￼ ￼
 
 ⸻
 
-6. FAQ – Wan 2.2 at a Glance
+## 6. FAQ – Wan 2.2 at a Glance
 
 Question	Answer
 Is Wan 2.2 entirely free?	Yes—open-source under Apache‑2.0; free tier online generator available.
@@ -137,7 +136,7 @@ Can I use generated videos commercially?	Yes—videos under Apache‑2.0 can be 
 
 ⸻
 
-7. Final Thoughts
+## 7. Final Thoughts
 
 Wan 2.2 delivers a powerful upgrade over Wan 2.1: cinematic motion, richer scene control, bilingual text rendering, and a streamlined free online generation tool.
 If your goal is “free AI video generator” capability—perfect for creators on tight VRAM—this is one of the most accessible, high‑fidelity models currently available.
@@ -148,10 +147,4 @@ No NDA. No token limits. Just prompt, generate, and own your creative output.
 
 Start today, and let Wan 2.2 bring your visual story to life without barriers.
 
-⸻
 
-
-**Citations**:  
-- Free online tool details [oai_citation:19‡wanvideogenerator.com](https://wanvideogenerator.com/wan22?utm_source=chatgpt.com) [oai_citation:20‡wan2.ai](https://wan2.ai/?utm_source=chatgpt.com) [oai_citation:21‡mimicpc.com](https://www.mimicpc.com/learn/wanvideo-the-best-open-source-image-to-video-generator?utm_source=chatgpt.com) [oai_citation:22‡wanvideogenerator.com](https://wanvideogenerator.com/free-wan-video-generator?utm_source=chatgpt.com)  
-- Pollo.ai integration and model info [oai_citation:23‡Pollo AI](https://pollo.ai/m/wanx-ai/wan-2-2?utm_source=chatgpt.com) [oai_citation:24‡docs.pollo.ai](https://docs.pollo.ai/m/wanx/wan-v2-2?utm_source=chatgpt.com)  
-- Data on model vs 2.1 differences, architecture, features [oai_citation:25‡wanvideogenerator.com](https://wanvideogenerator.com/?utm_source=chatgpt.com) [oai_citation:26‡wan.video](https://wan.video/?utm_source=chatgpt.com)
