@@ -1,10 +1,5 @@
 # Wan 2.2 Full Review: What, How, Features, and How to Use (Including Free Online Tool)
 
-*This ~2,000‑word article walks English-speaking creators, researchers, and developers through:  
-What Wan 2.2 is ▪ How it differs from Wan 2.1 ▪ Core features ▪ How it works ▪ How to use Wan 2.2 to create videos (online tool or paid tier) ▪ FAQ*
-
----
-
 ## 1. What *Is* Wan 2.2?
 
 **Wan 2.2** is Alibaba Tongyi Lab’s latest open video foundation model, released July 2025.  
