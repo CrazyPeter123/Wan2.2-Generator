@@ -113,7 +113,7 @@ curl https://pollo.ai/api/platform/generation/wanx/wan-v2-2 \
     },
     "webhookUrl": ""
   }'
-```bash
+```
 
 Response returns a taskId and status to poll for completion. ￼ ￼
 
